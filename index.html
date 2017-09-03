@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<div id="hello" class="legant">
+			<header class="legant__header">
+				<div class="legant__img"><img src="img/Logo.png" alt=""></div>
+				<ul class="legant__menu">
+					<li class="legant__li"><a href="#hello" class="legant__link">hello</a></li>
+					<li class="legant__li"><a href="#services" class="legant__link">services</a></li>
+					<li class="legant__li"><a href="#about" class="legant__link">aboutsus</a></li>
+					<li class="legant__li"><a href="#work" class="legant__link">our work</a></li>
+					<li class="legant__li"><a href="#footer" class="legant__link">contact us</a></li>
+				</ul>
+			</header>
+			<div class="legant__desc">
+				<h1 class="legant__title">we're creative agency</h1>
+				<h3 class="legant__subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <div></div>Aenean commodo ligula eget dolor. Aenean massa.</h3>
+			</div>
+			<div class="legant__flaticon"><img src="" alt=""></div>
+		</div>
+		<div id="services" class="services">
+			<h1 class="services__title">our services</h1>
+			<div class="services__main">
+				<div class="services__section">
+					<div class="services__img"><img src="img/flatphone.png" alt=""></div>
+					<div class="services__name">App Design</div>
+					<div class="services__text">Lorem ipsum dolor sit amet, consectetur adipisic-ing elit, sed do eiusmod tempor ilabore et dolore.</div>
+				</div>
+				<div class="services__section">
+					<div class="services__img"><img src="img/flatresp.png" alt=""></div>
+					<div class="services__name">Responsive Layout</div>
+					<div class="services__text">Lorem ipsum dolor sit amet, consectetur adipisic-ing elit, sed do eiusmod tempor ilabore et dolore.</div>
+				</div>
+				<div class="services__section">
+					<div class="services__img"><img src="img/flatclick.png" alt=""></div>
+					<div class="services__name">Pixel Perfect Design</div>
+					<div class="services__text">Lorem ipsum dolor sit amet, consectetur adipisic-ing elit, sed do eiusmod tempor ilabore et dolore.</div>
+				</div>
+			</div>
+		</div>
+		<div id="about" class="about">
+			<div class="about__main">
+				<div class="about__title">dolore magna aliqua</div>
+				<div class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>sed do eiusmod tempor incididunt ut labore <br>et dolore magna aliqua.</div>
+				<div class="about__more"><a class="about__link" href="#">more</a></div>
+			</div>
+			<div class="about__img"><img src="img/phone.png" alt=""></div>
+		</div>
+		<div id="work" class="work">
+			<div class="work__title">our work</div>
+			<div class="work__imgs">
+				<div class="work__img">
+					<img src="img/Layer2.png" alt="">
+					<div class="work__overlay">kinderen planet <br><br> <img src="img/workflat.png" alt=""></div>
+				</div>
+				<div class="work__img work__img--mid">
+					<img src="img/Layer1.png" alt="">
+					<div class="work__overlay">kinderen planet <br><br> <img src="img/workflat.png" alt=""></div>
+				</div>
+				<div class="work__img">
+					<img src="img/Layer3.png" alt="">
+					<div class="work__overlay">kinderen planet <br><br> <img src="img/workflat.png" alt=""></div>
+				</div>
+			</div>
+			<div class="work__button"><button>more</button></div>
+		</div>
+		<footer id="footer" class="footer">
+			<div class="footer__title">get in touch</div>
+			<ul class="footer__social">
+				<li class="footer__item footer__fb"><a href="#" class="footer__link"></a></li>
+				<li class="footer__item footer__twitter"><a href="#" class="footer__link"></a></li>
+				<li class="footer__item footer__in"><a href="#" class="footer__link"></a></li>
+				<li class="footer__item footer__v"><a href="#" class="footer__link"></a></li>
+				<li class="footer__item footer__be"><a href="#" class="footer__link"></a></li>
+			</ul>
+			<form action="" class="footer__form">
+				<input type="text" class="footer__name footer__itembut" placeholder="Name">
+				<input type="text" class="footer__mail footer__itembut" placeholder="Email">
+				<input type="text" class="footer__message footer__itembut" placeholder="Message">
+				<button class="button">send</button>
+			</form>
+		</footer>
+	</div>
+	<script type="text/javascript">
+$(document).ready(function(){
+$("#menu").on("click","a", function (event) {
+//отменяем стандартную обработку нажатия по ссылке
+event.preventDefault();
+
+//забираем идентификатор бока с атрибута href
+var id = $(this).attr('href'),
+
+//узнаем высоту от начала страницы до блока на который ссылается якорь
+top = $(id).offset().top;
+
+//анимируем переход на расстояние - top за 1500 мс
+$('body,html').animate({scrollTop: top}, 8500);
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,400|Raleway:400,700');
+
+.container{
+	height: 100%;
+}
+@mixin title{
+		text-transform: uppercase;
+		font-size: 48px;
+		font-weight: 700;
+		font-family: $raleway-font;
+}
+@mixin title__after{
+		content: '';
+		border-bottom: 1px solid #fff;
+		width: 100px;
+		position: absolute;
+		left: 50%;
+		top: 60%;
+		-webkit-transform: translate(-50%, 0);
+		   -moz-transform: translate(-50%, 0);
+		    -ms-transform: translate(-50%, 0);
+		     -o-transform: translate(-50%, 0);
+		        transform: translate(-50%, 0);
+}
+@mixin social-bg{
+		/*background-size: cover;*/
+		background-position: bottom;
+		background-repeat: no-repeat;
+		width: 35px;
+		height: 35px;
+}
+@mixin button__hover{
+			background: rgba(216,113,113, 0.3);
+			color: #8b4f4f;
+			-webkit-transition: All 0.5s ease;
+			-moz-transition: All 0.5s ease;
+			-o-transition: All 0.5s ease;
+			-ms-transition: All 0.5s ease;
+			transition: All 0.5s ease;
+}
+@mixin button__focus{
+			background: #e80000;
+			color: #919191;
+}
+@mixin link__hover{
+			color: #d87171;
+			border-bottom: 2px solid #d87171;
+}
+@mixin link__active{
+	color: #571111;
+	text-transform: uppercase;
+	border-bottom: 2px solid #571111
+}
+$lato-font: 'Lato', sans-serif;
+$raleway-font: 'Raleway', sans-serif;
+.legant{
+	height: 100vh;
+	background: url(../img/HERO.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	&__header{
+		padding: 50px 150px;
+	}
+	&__img{
+		float: left;
+	}
+	&__menu{
+		float: right;
+		margin: 0;
+	}
+	&__li{
+		display: inline;
+		font-size: 14px;
+		font-family: $lato-font;
+		/*padding-left: 20px;*/
+	}
+	.legant__li:hover{
+		.legant__link{
+			@include link__hover;
+		}
+	}
+	.legant__li:active,
+	.legant__li:focus{
+		.legant__link{
+			@include link__active;
+		}
+	}
+	.legant__li:not(:first-child){
+		padding-left: 20px;
+	}
+	&__link{
+		text-decoration: none;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	&__desc{
+		clear: both;
+		text-align: center;
+		color: #fff;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		   -moz-transform: translate(-50%, -50%);
+		    -ms-transform: translate(-50%, -50%);
+		     -o-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
+	&__title{
+		@include title;
+	}
+	.legant__title:after{
+		@include title__after;
+	}
+	&__subtitle{
+		font-family: $lato-font;
+		font-weight: 400;
+		font-size: 22px;
+		margin-top: 65px;
+	}
+	&__flaticon{
+		background: url(../img/flaticon.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 90px;
+		height: 90px;
+		position: absolute;
+		left: 50%;
+		bottom: 10%;
+		-webkit-transform: translate(-50%, 10%);
+		   -moz-transform: translate(-50%, 10%);
+		    -ms-transform: translate(-50%, 10%);
+		     -o-transform: translate(-50%, 10%);
+		        transform: translate(-50%, 10%);
+	}
+	&__flaticon:hover{
+		/*background: #fff;*/
+		cursor: pointer;
+	}
+}
+.services{
+	height: 100vh;
+	position: relative;
+	&__title{
+		@include title;
+		color: #333;
+		text-align: center;
+		position: relative;
+		font-size: 35px;
+		margin: 0;
+		padding-top: 70px;
+	}
+	.services__title:after{
+		@include title__after;
+		color: #333;
+		border-bottom: 1px solid #333;
+		bottom: -50px;
+	}
+	&__main{
+		display: block;
+		position: absolute;
+		left: 10%;
+		right: 10%;
+		bottom: 7%;
+	}
+	&__section{
+		display: inline-block;
+		width: 33%;
+		text-align: center;
+		font-size: 24px;
+		font-family: $lato-font;
+	}
+	&__name{
+		margin: 30px 0;
+	}
+	&__text{
+		font-size: 16px;
+		line-height: 35px;
+	}
+}
+.about {
+	display: block;
+	height: 100vh;
+	background: url(../img/img.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	&__main{
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		-webkit-transform: translate(-20%, -50%);
+		   -moz-transform: translate(-20%, -50%);
+		    -ms-transform: translate(-20%, -50%);
+		     -o-transform: translate(-20%, -50%);
+		        transform: translate(-20%, -50%);
+			}
+	&__title{
+		@include title;
+		color: #fff;
+		font-size: 45px;
+		font-family: $lato-font;
+		font-weight: 400;
+	}
+	&__text{
+		font-size: 22px;
+		font-family: $lato-font;
+		font-weight: 100;
+		color: #fff;
+		line-height: 30px;
+		padding: 5px 0 50px;
+	}
+	&__link{
+		color: #fff;
+		font-size: 18px;
+		font-family: $lato-font;
+		text-decoration: none;
+	}
+	&__link:hover{
+		@include link__hover;
+	}
+	&___link:active,
+	&__link:focus{
+		@include link__active;
+	}
+	&__img{
+		position: absolute;
+		right: 5%;
+		bottom: -4px;
+	}
+}
+.work{
+	/*height: 100vh;*/
+	position: relative;
+	&__title{
+		@include title;
+		color: #333;
+		text-align: center;
+		position: relative;
+		font-size: 35px;
+		margin: 0;
+		padding-top: 70px;
+	}
+	.work__title:after{
+		@include title__after;
+		color: #333;
+		border-bottom: 1px solid #333;
+		bottom: -50px;
+	}
+	&__imgs{
+		display: block;
+		text-align: center;
+		margin-top: 100px;
+	}
+	&__img{
+		display: inline-block;
+		width: 25%;
+		height: inherit;
+		position: relative;
+		overflow: hidden;
+		max-height: 420px;
+		&--mid{
+			margin: 0 30px;
+		}
+	}
+	&__overlay{
+		opacity: 0;
+		position: absolute;
+		top: 0; left: 0;
+		right: 0; bottom: 0;
+		text-align: center;
+		color: #fff;
+		font-size: 22px;
+		font-family: $lato-font;
+		text-transform: uppercase;
+		padding-top: 50%;
+	}
+	.work__img:hover{
+		.work__overlay{
+			opacity: 1;
+			background: rgba(64, 64, 64, 0.8);
+		}
+	}
+	&__button{
+		display: block;
+		text-align: center;
+		margin: 50px 0;
+		button{
+			width: 380px;
+			height: 60px;
+			background: #fff;
+			border: 1px solid #333;
+			text-transform: uppercase;
+			font-size: 24px;
+			font-family: $lato-font;
+		}
+		button:hover{
+			@include button__hover;
+		}
+		button:focus,
+		button:active{
+			@include button__focus;
+		}
+	}
+}
+.footer{
+	height: 100vh;
+	background:url(../img/footer.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	&__title{
+		@include title;
+		color: #fff;
+		text-align: center;
+		position: relative;
+		font-size: 35px;
+		margin: 0;
+		padding-top: 70px;
+	}
+	.footer__title:after{
+		@include title__after;
+		color: #fff;
+		border-bottom: 1px solid #fff;
+		bottom: -50px;
+	}
+	&__social{
+		display: block;
+		text-align: center;
+		margin: 80px 0 30px;
+		padding: 0;
+	}
+	&__item{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&__fb{
+		background: url(../img/shape1.png);
+		@include social-bg;
+	}&__twitter{
+		background: url(../img/shape2.png);
+		@include social-bg;
+	}&__in{
+		background: url(../img/shape3.png);
+		@include social-bg;
+	}&__v{
+		background: url(../img/shape4.png);
+		@include social-bg;
+	}&__be{
+		background: url(../img/shape5.png);
+		@include social-bg;
+	}
+	&__link{
+		height: 100%;
+		display: block;
+	}
+	&__form{
+		display: block;
+		text-align: center;
+	}
+	&__itembut{
+		height: 50px;
+		background-color: transparent;
+		border: none;
+		padding-left: 30px;
+		border-bottom: 3px solid #fff;
+		color: #fff;
+	}
+	.footer__itembut:active,
+	.footer__itembut:focus{
+		/*border: none;*/
+	}
+	&__name{
+		display: inline-block;
+		width: 300px;
+margin: 0 auto;
+		margin-right: 30px;
+	}
+	&__mail{
+		display: inline-block;
+		width: 300px;
+		margin: 0 auto;
+	}
+	&__message{
+		width: 670px;
+		margin: 0 auto;
+	}
+	input{
+		outline: none;
+	}
+	.button{
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: 15%;
+		-webkit-transform: translate(-50%, -20%);
+		   -moz-transform: translate(-50%, -20%);
+		    -ms-transform: translate(-50%, -20%);
+		     -o-transform: translate(-50%, -20%);
+		        transform: translate(-50%, -20%);
+	}
+	button{
+		width: 200px;
+		height: 60px;
+		border: 2px solid #fff;
+		background-color: transparent;
+		font-size: 24px;
+		font-family: $lato-font;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	button:hover{
+		@include button__hover;
+	}
+	button:focus,
+	button:active{
+		@include button__focus;
+	}
+}
